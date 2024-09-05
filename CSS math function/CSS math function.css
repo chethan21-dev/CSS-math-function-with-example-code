@@ -1,0 +1,95 @@
+CSS Math function - 
+1. The CSS math functions allow mathematical expressions to be used as property values. 
+2. Here, we will explain the calc(), max() and min() functions.
+
+The calc() Function
+The calc() function performs a calculation to be used as the property value.
+CSS Syntax - 
+calc(expression)
+expression 
+Required. A mathematical expression. The result will be used as the value.
+The following operators can be used: + - * /
+
+All CSS Math Functions - 
+A. calc() 	Allows you to perform calculations to determine CSS property values
+B. max() 	Uses the largest value, from a comma-separated list of values, as the property value
+C. min() 	Uses the smallest value, from a comma-separated list of values, as the property value
+
+Example - 
+Use calc() to calculate the width of a <div> element:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#div1 {
+  position: absolute;
+  left: 40px;
+  width: calc(100% - 100px);
+  border: 2px solid black;
+  background-color: grey;
+  padding: 6px;
+}
+</style>
+</head>
+<body>
+<h1>CSS calc()</h1>
+<p>Create a div that stretches across the window, with a 50px gap between both sides of the div and the edges of the window:</p>
+<div id="div1">Random content...</div>
+</body>
+</html>
+
+I. The max() Function - 
+The max() function uses the largest value, from a comma-separated list of values, as the property value.
+CSS Syntax - 
+max(value1, value2, ...)
+value1, value2, ... 	
+Required. A list of comma-separated values - where the largest value is chosen
+
+Example - 
+Use max() to set the width of #div1 to whichever value is largest, 40% or 200px:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#div1 {
+  background-color: yellow;
+  height: 100px;
+  width: max(40%, 200px);
+}
+</style>
+</head>
+<body>
+<h1>CSS max()</h1>
+<p>Use max() to set the width of #div1 to whichever value is largest, 50% or 300px:</p>
+<div id="div1">Random Content...</div>
+<p>CSS max function was done to resize the browser window to see the effect</p>
+</body>
+</html>
+
+II. The min() Function - 
+The min() function uses the smallest value, from a comma-separated list of values, as the property value.
+CSS Syntax - 
+min(value1, value2, ...)
+value1, value2, ... 	Required. A list of comma-separated values - where the smallest value is chosen
+
+Example - 
+Use min() to set the width of #div1 to whichever value is smallest, 60% or 400px:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#div1 {
+  background-color: red;
+  height: 200px;
+  width: min(60%, 400px);
+}
+</style>
+</head>
+<body>
+<h1>CSS min() function</h1>
+<p>Use min() to set the width of #div1 to whichever value is smallest, 50% or 300px:</p>
+<div id="div1">Random Content...</div>
+<p>CSS min fun() done the here Resize the browser window to see the effect.</p>
+</body>
+</html>
+
